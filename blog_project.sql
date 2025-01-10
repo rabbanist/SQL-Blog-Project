@@ -37,6 +37,9 @@ CREATE TABLE blogs (
 
 -----CRUD Operations----
 
+--Insert Data into Authors table
+INSERT INTO authors (author_name) VALUES ('Adam Smith');
+
 --Retrieve all Author data 
 SELECT * FROM authors;
 
@@ -52,6 +55,9 @@ DELETE FROM authors WHERE id = 2;
 
 ---------------- Category Table query------------------
 
+--Insert Data into Categories table
+INSERT INTO categories (category_name) VALUES ('Programming');
+
 --Retrieve All category 
 SELECT * FROM categories;
 
@@ -65,7 +71,12 @@ UPDATE categories SET category_name = "Tech" WHERE id = 1;
 DELETE FROM categories WHERE id = 2;
 
 
+
 ----------- Blogs Table queries ---------------
+
+--Insert Data into Blogs table
+INSERT INTO blogs (title, body, category_id, author_id) VALUES
+('This is my blog', 'This is my blog content',2, 3)
 
 -- Retrieve all blogs
 SELECT * FROM blogs;
